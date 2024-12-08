@@ -6,7 +6,7 @@ import UserActions from "./userActions";
 
 export default function Navbar() {
   return (
-    <nav className="border-b p-4">
+    <nav className="border-b p-4 sticky top-0 z-50 bg-white">
       <div className="flex justify-between items-center">
         <div className="flex justify-between items-center w-fit md:w-[55vw] gap-2">
           <Logo />

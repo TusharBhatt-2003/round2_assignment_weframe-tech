@@ -1,14 +1,26 @@
 import { details } from "@/app/data/data";
-import React from "react";
+import React, { useState } from "react";
 
 const ProductDetails = () => {
+  // State to track whether the heart is "liked" or not
+  const [isLiked, setIsLiked] = useState(false);
+
+  // Toggle the "liked" state
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+  };
   return (
     <div className="w-[80vw] lg:w-[45vw] lg:h-[65vh] py-5">
       <div className="flex justify-between">
         <h1 className='font-["playfair"] font-medium text-xl'>
           {details.name}
         </h1>
-        <img src="heart.svg" />
+        <img
+          src={isLiked ? "redHeart.svg" : "heart.svg"}
+          alt="add to favourite"
+          className="lg:w-7 lg:ml-2 cursor-pointer transition-all ease-in-out"
+          onClick={toggleLike}
+        />
       </div>
       <div className="flex items-center gap-2">
         <p className="text-sm font-semibold">{details.price}</p>

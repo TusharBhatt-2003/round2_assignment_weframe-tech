@@ -1,11 +1,7 @@
-// Importing the navList data from the data file
+import React from "react";
 import { navList } from "@/app/data/data";
-import React, { useState } from "react";
 
-const NavList = () => {
-  // State to track the currently active nav item
-  const [activeIndex, setActiveIndex] = useState(0);
-
+const NavList = ({ activeIndex, setActiveIndex }) => {
   // Function to handle clicks and set the active index
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -41,7 +37,7 @@ const NavList = () => {
               activeIndex === index
                 ? "text-[#0093d0] font-semibold"
                 : "text-gray-500"
-            } text-[#0093d0] font-semibold`}
+            }`}
             onClick={() => handleClick(index)}
           >
             {item}

@@ -62,4 +62,48 @@ const promoData = [
     subtitle: "On s’occupe de tout.",
   },
 ];
-export { navList, description, details, faq, promoData };
+
+const ctaData = {
+  heading: "S’inscrire & économiser",
+  percent: "10%",
+  para: `Office ipsum you must be muted. Synergize helicopter prioritize anyway job due harvest most opportunity didn't. Yet busy any meeting shark light marginalised 4-blocker message. Productize corporate nail caught synergy highlights lunch. Company another pushback items dear or any.`,
+  placeholder: "john@doe.com",
+  button: "S’inscrire",
+};
+
+const footerData = [
+  {
+    title: "INFOS PRATIQUES",
+    links: [`À propos`, `Livraisons & Reprises`, `Mode d’emploi`, `F.A.Q`],
+  },
+  {
+    title: "LÉGAL",
+    links: ["Mentions légales", "CGU", "CGV", "Politique de confidentialité"],
+  },
+  {
+    title: "MON COMPTE",
+    links: [
+      "Accéder à mon compte",
+      "Ma liste d’envie",
+      "Créer un compte",
+      "Mot de passe oublié",
+    ],
+  },
+];
+
+const socialMediaIcons = [
+  { name: "twitter", src: "twitter.svg", link: "x.com" },
+  { name: "instagram", src: "insta.svg", link: "instagram.com" },
+  { name: "linkedin", src: "linkedin.svg", link: "linkedin.com" },
+];
+
+export {
+  navList,
+  description,
+  details,
+  faq,
+  promoData,
+  ctaData,
+  footerData,
+  socialMediaIcons,
+};

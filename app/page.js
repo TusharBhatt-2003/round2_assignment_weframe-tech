@@ -1,4 +1,6 @@
 "use client";
+import CTA from "./components/CTA/CTA";
+import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/navbar";
 import Product from "./components/productDetail/product";
 import Promo from "./components/promotional/promo";
@@ -18,6 +20,8 @@ export default function Home() {
       <SimilarProduct />
       <RecomendedItem />
       <Promo />
+      <CTA />
+      <Footer />
     </>
   );
 }

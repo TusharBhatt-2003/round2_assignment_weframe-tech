@@ -6,13 +6,13 @@ import UserActions from "./userActions";
 
 export default function Navbar() {
   return (
-    <nav className="border-b pt-4 px-4">
+    <nav className="border-b p-4">
       <div className="flex justify-between items-center">
-        <div className="flex w-[55vw] gap-2">
+        <div className="flex justify-between items-center w-fit md:w-[55vw] gap-2">
           <Logo />
           <SearchBar />
         </div>
-        <div className="actions w-[45vw] flex items-center gap-4">
+        <div className="actions md:w-[45vw] flex items-center gap-4">
           <UserActions />
         </div>
       </div>

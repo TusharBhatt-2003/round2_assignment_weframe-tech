@@ -1,6 +1,8 @@
 "use client";
 import Navbar from "./components/navbar/navbar";
 import Product from "./components/productDetail/product";
+import RecomendedItem from "./components/recommendedProducts/recomendedItem";
+import SimilarProduct from "./components/similarProducts/similarproduct";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
         <p className="text-[#9c9c9c] font-semibold text-sm">Art de la table</p>
       </div>
       <Product />
+      <SimilarProduct />
+      <RecomendedItem />
     </>
   );
 }

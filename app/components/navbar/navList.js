@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const NavList = () => {
   // State to track the currently active nav item
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // Function to handle clicks and set the active index
   const handleClick = (index) => {

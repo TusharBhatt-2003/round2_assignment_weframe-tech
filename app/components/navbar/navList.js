@@ -41,7 +41,7 @@ const NavList = () => {
               activeIndex === index
                 ? "text-[#0093d0] font-semibold"
                 : "text-gray-500"
-            } hover:text-gray-700`}
+            } text-[#0093d0] font-semibold`}
             onClick={() => handleClick(index)}
           >
             {item}

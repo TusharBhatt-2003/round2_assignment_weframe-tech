@@ -35,4 +35,31 @@ const details = {
 };
 
 const faq = ["Livraisons", "Questions"];
-export { navList, description, details, faq };
+
+const promoData = [
+  {
+    id: "1",
+    src: "promo1.svg",
+    title: "Livraison & Reprise",
+    subtitle: "Selon vos besoins",
+  },
+  {
+    id: "2",
+    src: "promo2.svg",
+    title: "Nettoyage",
+    subtitle: "Selon vos besoins",
+  },
+  {
+    id: "3",
+    src: "promo3.svg",
+    title: "Commande Illimitée",
+    subtitle: "Tout est possible",
+  },
+  {
+    id: "4",
+    src: "promo4.svg",
+    title: "Transport & Enlèvement",
+    subtitle: "On s’occupe de tout.",
+  },
+];
+export { navList, description, details, faq, promoData };

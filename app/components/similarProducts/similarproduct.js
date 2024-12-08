@@ -41,7 +41,7 @@ const SimilarProduct = () => {
         <div className="flex w-fit gap-1 ">
           {Array(9)
             .fill(0)
-            .map((_, index) => (
+            .map((index) => (
               <div className="w-[45vw] lg:w-[25vw]">
                 <Productcard key={index} />
               </div>

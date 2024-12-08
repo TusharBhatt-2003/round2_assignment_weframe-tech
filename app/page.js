@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "./components/navbar/navbar";
 import Product from "./components/productDetail/product";
+import Promo from "./components/promotional/promo";
 import RecomendedItem from "./components/recommendedProducts/recomendedItem";
 import SimilarProduct from "./components/similarProducts/similarproduct";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Product />
       <SimilarProduct />
       <RecomendedItem />
+      <Promo />
     </>
   );
 }

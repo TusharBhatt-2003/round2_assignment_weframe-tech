@@ -19,6 +19,7 @@ const ProductDetails = () => {
           {details.name}
         </h1>
         <img
+          role="button"
           aria-label="Add to Favourite"
           src={isLiked ? "redHeart.svg" : "heart.svg"}
           alt="add to favourite"
@@ -39,14 +40,18 @@ const ProductDetails = () => {
           <div className="flex items-center gap-2">
             <img src="scale.svg" alt="length" className="w-5" />
             <div aria-label="length">
-              <p>{details.length}</p>
-              <sup className="font-light">cm</sup>
+              <p>
+                {details.length}
+                <sup className="font-light">cm</sup>
+              </p>
             </div>
           </div>
           <div aria-label="area" className="flex items-center gap-2">
             <img src="area.svg" alt="area" className="w-5" />
             <div>
-              {details.area} <sup className="font-light">cm</sup>
+              <p>
+                {details.area} <sup className="font-light">cm</sup>
+              </p>
             </div>
           </div>
         </div>

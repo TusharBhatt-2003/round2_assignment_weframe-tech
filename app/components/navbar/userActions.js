@@ -7,6 +7,7 @@ function UserActions() {
       className='flex cursor-pointer select-none w-full justify-end items-center gap-4 font-["poppins"] text-[#1f2a37] text-xs'
     >
       <div
+        role="button"
         aria-label="inspirations"
         className="md:flex hidden gap-2 text-[#3b4347] font-[500]"
       >
@@ -14,6 +15,7 @@ function UserActions() {
         Inspirations
       </div>
       <div
+        role="button"
         aria-label="Fav"
         className="md:flex hidden justify-center items-center gap-2 text-[#3b4347] font-[500]"
       >
@@ -28,10 +30,19 @@ function UserActions() {
         <img src="cart.svg" alt="cart" />
         <p className="hidden lg:block">Panier</p>
       </button>
-      <div className="w-8 h-8 rounded-full bg-[#eaedee]"></div>
+      <div
+        id="profile"
+        role="button"
+        className="w-8 h-8 rounded-full bg-[#eaedee]"
+      ></div>
       <div className="lg:flex hidden gap-2">
         <p>FR</p>
-        <img src="dropDown.svg" alt="language" />
+        <img
+          role="button"
+          id="lang-dropdown"
+          src="dropDown.svg"
+          alt="language"
+        />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ const ProductCard = () => {
         <div className="flex justify-between items-center px-2 pt-2">
           {/* Heart icon that toggles */}
           <img
+            role="button"
             src={isLiked ? "redHeart.svg" : "heart.svg"}
             alt="add to favourite"
             className="lg:w-7 lg:ml-2 cursor-pointer transition-all ease-in-out"

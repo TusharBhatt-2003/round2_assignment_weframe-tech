@@ -9,7 +9,7 @@ function Footer() {
       className="flex lg:flex-row flex-col gap-10  font-['poppins'] justify-between items-center p-5 py-10 w-full h-[30vh]"
     >
       <div className="flex gap-5">
-        <div aria-label="Logo" className="hidden lg:block">
+        <div role="button" aria-label="Logo" className="hidden lg:block">
           <Logo />
         </div>
         <div aria-label="Footer Tags" className="flex gap-5 lg:gap-16">
@@ -39,6 +39,7 @@ function Footer() {
         <div aria-label="Social Media" className="flex  lg:items-end">
           {socialMediaIcons.map((icon, i) => (
             <a
+              role="button"
               href={icon.link}
               key={i}
               aria-label={icon.name || "social media link"}

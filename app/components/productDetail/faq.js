@@ -11,7 +11,7 @@ const FAQ = () => {
             className="flex justify-between bg-[#fcf9f9] text-[#393939] uppercase rounded-lg py-4 px-5"
           >
             <h4>{faq}</h4>
-            <img src="plus.svg" alt="plus" />
+            <img role="button" src="plus.svg" alt="plus" />
           </div>
         ))
       ) : (

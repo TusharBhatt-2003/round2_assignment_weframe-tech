@@ -16,6 +16,7 @@ const NavList = ({ activeIndex, setActiveIndex }) => {
       >
         {navList.map((item, index) => (
           <a
+            role="button"
             key={index}
             href={`#${item.replace(/\s+/g, "-").toLowerCase()}`} // Dynamically setting href based on item name
             className={`text-xs ${

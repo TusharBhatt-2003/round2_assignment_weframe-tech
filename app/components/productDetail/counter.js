@@ -17,13 +17,20 @@ const Counter = () => {
       className="border select-none rounded-lg w-[40%] lg:w-[30%] flex py-3 lg:p-3 justify-around gap-2 lg:gap-5 items-center"
     >
       <img
+        role="button"
         aria-label="Minus"
         src="minus.svg"
         alt="Decrease"
         onClick={decrement}
       />
       {count}
-      <img aria-label="Add" src="plus.svg" alt="Increase" onClick={increment} />
+      <img
+        role="button"
+        aria-label="Add"
+        src="plus.svg"
+        alt="Increase"
+        onClick={increment}
+      />
     </div>
   );
 };

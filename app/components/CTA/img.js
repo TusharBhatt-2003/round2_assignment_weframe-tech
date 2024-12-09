@@ -7,7 +7,7 @@ function Img() {
       className="hidden  w-[40%] lg:grid place-content-center overflow-hidden rounded-xl"
     >
       <img
-        src="ctaImg.jpeg"
+        src="ctaImg.webp"
         alt="CTA Image"
         className="bg-cover h-full w-full transform scale-x-[-1]" // mirror image as in the figma design
       />

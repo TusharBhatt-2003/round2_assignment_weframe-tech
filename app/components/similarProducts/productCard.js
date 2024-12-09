@@ -32,11 +32,11 @@ const ProductCard = () => {
             ART DE LA TABLE
           </p>
         </div>
-        <div className="w-full grid place-content-center">
+        <div className="w-full p-5 grid place-content-center">
           <img
             aria-label="Product Image"
             src="table.png"
-            className="drop-shadow-lg"
+            className="w-36 h-36 drop-shadow-lg"
             alt="Table"
           />
         </div>

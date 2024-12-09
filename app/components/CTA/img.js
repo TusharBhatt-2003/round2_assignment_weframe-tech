@@ -9,7 +9,7 @@ function Img() {
       <img
         src="ctaImg.jpeg"
         alt="CTA Image"
-        className="bg-cover transform scale-x-[-1]" // mirror image as in the figma design
+        className="bg-cover h-full w-full transform scale-x-[-1]" // mirror image as in the figma design
       />
     </div>
   );

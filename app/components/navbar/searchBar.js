@@ -11,7 +11,7 @@ const SearchBar = () => {
         className="outline-none w-full pl-2 text-xs md:text-base bg-transparent placeholder:text-[#667482]"
       />
       <div>
-        <img src="search.svg" alt="search icon" />
+        <img src="search.svg" alt="search icon" className="w-5 h-5" />
       </div>
     </div>
   );

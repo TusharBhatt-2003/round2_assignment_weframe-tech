@@ -64,11 +64,11 @@ const ProductDetails = () => {
         {details.moreDetails.map((detailList, i) => {
           return <li key={i}>{detailList}</li>;
         })}
-        <div aria-label="power" className="mt-5">
-          <p>{details.v}</p>
-          <p>{details.w}</p>
-        </div>
       </ul>
+      <div aria-label="power" className="mt-5 text-[#5d5d5d]">
+        <p>{details.v}</p>
+        <p>{details.w}</p>
+      </div>
     </div>
   );
 };

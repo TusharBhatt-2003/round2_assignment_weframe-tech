@@ -15,7 +15,7 @@ function ProductDisplay() {
           src="displayItem.png"
           alt="product"
           aria-label="Product image"
-          className="w-[25vw] center drop-shadow-xl"
+          className="w-[60vw] h-[30vh] md:w-[40vw] md:h-[30vh] lg:w-[25vw]  lg:h-[50vh] center drop-shadow-xl"
         />
         {/* Stacked Fading Images */}
         <div aria-label="Color Options" className="absolute p-2">
@@ -24,7 +24,7 @@ function ProductDisplay() {
               key={index}
               src={src}
               alt={`${index + 1}`}
-              className="w-10 rounded mb-1 hover:scale-110 transition-all ease-in-out"
+              className="w-10 h-10 rounded mb-1 hover:scale-110 transition-all ease-in-out"
               style={{
                 opacity: 1 - index * 0.2, // Decreasing opacity for each image
               }}

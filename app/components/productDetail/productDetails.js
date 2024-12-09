@@ -32,7 +32,7 @@ const ProductDetails = () => {
           aria-label="Add to Favourite"
           src={isLiked ? "redHeart.svg" : "heart.svg"}
           alt="add to favourite"
-          className="lg:w-7 lg:ml-2 cursor-pointer "
+          className="w-7 h-7  cursor-pointer "
           onClick={toggleLike}
         />
       </div>
@@ -47,7 +47,7 @@ const ProductDetails = () => {
       <div className="flex justify-between text-sm font-medium border-y my-2 py-3">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <img src="scale.svg" alt="length" className="w-5" />
+            <img src="scale.svg" alt="length" className="w-5 h-5" />
             <div aria-label="length">
               <p>
                 {details.length}
@@ -56,7 +56,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div aria-label="area" className="flex items-center gap-2">
-            <img src="area.svg" alt="area" className="w-5" />
+            <img src="area.svg" alt="area" className="w-5 h-5" />
             <div>
               <p>
                 {details.area} <sup className="font-light">cm</sup>

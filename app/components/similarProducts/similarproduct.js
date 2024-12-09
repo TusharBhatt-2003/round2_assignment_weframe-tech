@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Productcard from "./productCard";
+import { motion } from "framer-motion";
 
 const SimilarProduct = () => {
   // Ref to the scrollable container
@@ -70,7 +71,18 @@ const SimilarProduct = () => {
         onClick={slideLeft}
         className="hidden  absolute top-1/2 left-0 transform -translate-y-1/2 w-7 h-7 bg-[#5CD2DD] lg:grid place-content-center"
       >
-        <img src="/arrow-right.svg" alt="left-arrow" className="w-5" />
+        <motion.img
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 10,
+          }}
+          src="/arrow-right.svg"
+          alt="left-arrow"
+          className="w-5"
+        />
       </button>
 
       {/* Right Button */}

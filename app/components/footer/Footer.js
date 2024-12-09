@@ -1,13 +1,56 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import Logo from "../navbar/logo";
 import { footerData, socialMediaIcons } from "@/app/data/data";
 import { motion } from "framer-motion";
 
 function Footer() {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const footerEl = footerRef.current;
+
+    // Target all <li> elements within the footer
+    const listItems = footerEl.querySelectorAll("li");
+
+    // Initial setup for list items
+    gsap.set(listItems, { y: 50, opacity: 0 });
+
+    const handleIntersect = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Trigger animation
+          gsap.to(listItems, {
+            y: 0,
+            opacity: 1,
+            stagger: 0.05,
+            duration: 1.5,
+            ease: "elastic(2, 1)",
+          });
+          // Disconnect observer to ensure animation happens only once
+          observer.disconnect();
+        }
+      });
+    };
+
+    // Create IntersectionObserver
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: null,
+      threshold: 0.3, // Trigger animation when 30% of the footer is visible
+    });
+
+    // Observe the footer
+    observer.observe(footerEl);
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <footer
+      ref={footerRef}
       id="footer"
-      className="flex lg:flex-row flex-col gap-10  font-['poppins'] justify-between items-center p-5 py-10 w-full h-[30vh]"
+      className="flex lg:flex-row flex-col gap-10 font-['poppins'] justify-between items-center p-5 py-10 w-full h-[30vh]"
     >
       <div className="flex gap-5">
         <div role="button" aria-label="Logo" className="hidden lg:block">
@@ -37,7 +80,7 @@ function Footer() {
         <p className="text-[#393939] text-center lg:text-end lg:mr-3 text-sm">
           NOUS SUIVRE
         </p>
-        <div aria-label="Social Media" className="flex  lg:items-end">
+        <div aria-label="Social Media" className="flex lg:items-end">
           {socialMediaIcons.map((icon, i) => (
             <motion.a
               whileHover={{ scale: 1.1 }}

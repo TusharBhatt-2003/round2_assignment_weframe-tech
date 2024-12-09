@@ -1,9 +1,41 @@
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ctaData } from "@/app/data/data";
 import { motion } from "framer-motion";
-import React from "react";
+
 function CtaBox() {
+  const ctaBoxRef = useRef(null); // Create a reference to the CTA box
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const ctaBoxElement = ctaBoxRef.current;
+
+      // Check if the element is in the viewport
+      const rect = ctaBoxElement.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        // If it's in the viewport, animate it from right to left only once
+        gsap.to(ctaBoxElement, {
+          x: 0,
+          opacity: 1,
+          duration: 1.5,
+          ease: "elastic",
+        });
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Initial setup (to position the CTA box off-screen to the right)
+    gsap.set(ctaBoxRef.current, { x: "100%", opacity: 0 });
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
+      ref={ctaBoxRef}
       aria-label="CTA Box"
       className='w-full lg:w-[60%] px-5 grid place-content-center font-["poppins"] rounded-xl bg-[#fff3f9]'
     >

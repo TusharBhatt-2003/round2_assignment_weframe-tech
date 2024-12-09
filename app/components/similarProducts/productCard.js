@@ -31,7 +31,7 @@ const ProductCard = () => {
             aria-label="Add to Favourite"
             src={isLiked ? "redHeart.svg" : "heart.svg"}
             alt="add to favourite"
-            className="lg:w-7 lg:ml-2 cursor-pointer "
+            className="w-7 h-7  cursor-pointer "
             onClick={toggleLike}
           />
           <p

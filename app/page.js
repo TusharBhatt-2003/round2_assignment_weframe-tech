@@ -1,12 +1,13 @@
 "use client";
-import CTA from "./components/CTA/CTA";
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/navbar";
-import Product from "./components/productDetail/product";
-import Promo from "./components/promotional/promo";
-import RecomendedItem from "./components/recommendedProducts/recomendedItem";
-import SimilarProduct from "./components/similarProducts/similarproduct";
-
+import {
+  Navbar,
+  Product,
+  SimilarProduct,
+  RecommendedItem,
+  Promo,
+  CTA,
+  Footer,
+} from "./components/index";
 export default function Home() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function Home() {
       <main id="main-content">
         <Product />
         <SimilarProduct />
-        <RecomendedItem />
+        <RecommendedItem />
         <Promo />
         <CTA />
       </main>

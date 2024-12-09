@@ -1,6 +1,9 @@
 const SearchBar = () => {
   return (
-    <div className="search-bar w-fit lg:w-full bg-[#f9fafb] flex justify-between items-center md:gap-5 rounded-lg p-3">
+    <div
+      id="search-bar"
+      className="search-bar w-fit lg:w-full bg-[#f9fafb] flex justify-between items-center md:gap-5 rounded-lg p-3"
+    >
       <input
         type="text"
         name="search"

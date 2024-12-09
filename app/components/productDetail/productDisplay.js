@@ -5,15 +5,20 @@ function ProductDisplay() {
   const images = new Array(4).fill("table.jpeg");
 
   return (
-    <div className="grid place-content-center lg:h-[75vh] w-full">
+    <div
+      id="product-display"
+      aria-label="Product"
+      className="grid place-content-center lg:h-[75vh] w-full"
+    >
       <div className="relative grid place-content-center bg-[#f8f6f4] rounded-lg w-[80vw] h-[30vh] lg:w-[45vw] lg:h-[70vh]">
         <img
           src="displayItem.png"
           alt="product"
+          aria-label="Product image"
           className="w-[25vw] center drop-shadow-xl"
         />
         {/* Stacked Fading Images */}
-        <div className="absolute p-2">
+        <div aria-label="Color Options" className="absolute p-2">
           {images.map((src, index) => (
             <img
               key={index}

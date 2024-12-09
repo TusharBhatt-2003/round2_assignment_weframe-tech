@@ -11,11 +11,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Product />
-      <SimilarProduct />
-      <RecomendedItem />
-      <Promo />
-      <CTA />
+      <main id="main-content">
+        <Product />
+        <SimilarProduct />
+        <RecomendedItem />
+        <Promo />
+        <CTA />
+      </main>
       <Footer />
     </>
   );

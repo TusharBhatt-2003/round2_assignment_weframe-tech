@@ -7,7 +7,11 @@ import FAQ from "./faq";
 
 const Product = () => {
   return (
-    <div className="h-fit mt-10 lg:mt-0 items-center lg:h-screen lg:flex">
+    <section
+      id="product"
+      aria-label="Product Display"
+      className="h-fit mt-10 lg:mt-0 items-center lg:h-screen lg:flex"
+    >
       <div className="lg:w-1/2  h-fit lg:h-full">
         <ProductDisplay />
         <Description />
@@ -17,7 +21,7 @@ const Product = () => {
         <Btns />
         <FAQ />
       </div>
-    </div>
+    </section>
   );
 };
 

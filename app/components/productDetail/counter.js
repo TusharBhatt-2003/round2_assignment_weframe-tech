@@ -11,10 +11,19 @@ const Counter = () => {
   };
 
   return (
-    <div className="border select-none rounded-lg w-[40%] lg:w-[30%] flex py-3 lg:p-3 justify-around gap-2 lg:gap-5 items-center">
-      <img src="minus.svg" alt="Decrease" onClick={decrement} />
+    <div
+      id="counter"
+      aria-label="Counter"
+      className="border select-none rounded-lg w-[40%] lg:w-[30%] flex py-3 lg:p-3 justify-around gap-2 lg:gap-5 items-center"
+    >
+      <img
+        aria-label="Minus"
+        src="minus.svg"
+        alt="Decrease"
+        onClick={decrement}
+      />
       {count}
-      <img src="plus.svg" alt="Increase" onClick={increment} />
+      <img aria-label="Add" src="plus.svg" alt="Increase" onClick={increment} />
     </div>
   );
 };

@@ -10,7 +10,10 @@ const NavList = ({ activeIndex, setActiveIndex }) => {
   return (
     <>
       {/* Desktop navigation */}
-      <nav className="hidden lg:flex justify-between pt-5 font-['poppins'] w-full">
+      <nav
+        id="nav-list"
+        className="hidden lg:flex justify-between pt-5 font-['poppins'] w-full"
+      >
         {navList.map((item, index) => (
           <a
             key={index}

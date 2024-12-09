@@ -26,19 +26,27 @@ const SimilarProduct = () => {
   };
 
   return (
-    <div className="px-5 w-full relative bg-[#fdfbfb] ">
+    <section
+      id="similar-items"
+      aria-label="Similar Items"
+      className="px-5 w-full relative bg-[#fdfbfb] "
+    >
       <div className="flex items-center justify-between py-4">
         <h2 className="font-['poppins'] text-xl">Articles similaires</h2>
-        <p className="text-xs underline underline-offset-2 uppercase font-medium">
+        <a
+          href="link"
+          aria-label="link"
+          className="text-xs underline underline-offset-2 uppercase font-medium"
+        >
           Voir toute la collection
-        </p>
+        </a>
       </div>
       {/* Scrollable container */}
       <div
         className="overflow-hidden overflow-x-scroll scroll-smooth"
         ref={containerRef}
       >
-        <div className="flex w-fit gap-1 ">
+        <div aria-label="Similar Products" className="flex w-fit gap-1 ">
           {Array(9)
             .fill(0)
             .map(
@@ -46,7 +54,11 @@ const SimilarProduct = () => {
                 _,
                 index, // Use index as a fallback for keys
               ) => (
-                <div key={index} className="w-[45vw] lg:w-[25vw]">
+                <div
+                  aria-label="Product Card"
+                  key={index}
+                  className="w-[45vw] lg:w-[25vw]"
+                >
                   <Productcard />
                 </div>
               ),
@@ -72,7 +84,7 @@ const SimilarProduct = () => {
           alt="right-arrow"
         />
       </button>
-    </div>
+    </section>
   );
 };
 

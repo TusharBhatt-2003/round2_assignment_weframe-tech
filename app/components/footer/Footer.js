@@ -4,12 +4,15 @@ import { footerData, socialMediaIcons } from "@/app/data/data";
 
 function Footer() {
   return (
-    <div className="flex lg:flex-row flex-col gap-10  font-['poppins'] justify-between items-center p-5 py-10 w-full h-[30vh]">
+    <footer
+      id="footer"
+      className="flex lg:flex-row flex-col gap-10  font-['poppins'] justify-between items-center p-5 py-10 w-full h-[30vh]"
+    >
       <div className="flex gap-5">
-        <div className="hidden lg:block">
+        <div aria-label="Logo" className="hidden lg:block">
           <Logo />
         </div>
-        <div className="flex gap-5 lg:gap-16">
+        <div aria-label="Footer Tags" className="flex gap-5 lg:gap-16">
           {footerData.map((section, i) => (
             <div key={i}>
               <h1 className="text-sm text-[#393939] font-semibold">
@@ -33,7 +36,7 @@ function Footer() {
         <p className="text-[#393939] text-center lg:text-end lg:mr-3 text-sm">
           NOUS SUIVRE
         </p>
-        <div className="flex  lg:items-end">
+        <div aria-label="Social Media" className="flex  lg:items-end">
           {socialMediaIcons.map((icon, i) => (
             <a
               href={icon.link}
@@ -49,7 +52,7 @@ function Footer() {
           ))}
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

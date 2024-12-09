@@ -3,7 +3,7 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="my-5 w-full lg:w-[45vw] h-[25vh]">
+    <div id="faq" aria-label="FAQ" className="my-5 w-full lg:w-[45vw] h-[25vh]">
       {faq?.length ? (
         faq.map((faq, i) => (
           <div

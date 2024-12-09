@@ -20,6 +20,7 @@ const ProductCard = () => {
         <div className="flex justify-between items-center px-2 pt-2">
           {/* Heart icon that toggles */}
           <motion.img
+            loading="lazy"
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.8 }}
             transition={{

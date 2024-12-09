@@ -1,6 +1,6 @@
 import { ctaData } from "@/app/data/data";
+import { motion } from "framer-motion";
 import React from "react";
-
 function CtaBox() {
   return (
     <div
@@ -27,9 +27,16 @@ function CtaBox() {
           aria-label="Email Input"
           className="w-[70%] lg:w-[80%] p-2 rounded-lg border border-[#f5e1eb] outline-none placeholder:text-[#bda2b0]"
         />
-        <button
+        <motion.button
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 10,
+          }}
           aria-label="Subscribe Btn"
-          className="w-[30%] lg:w-[20%] text-white uppercase text-xs flex justify-center items-center border border-[#5cd2dd] rounded-lg bg-[#5cd2dd] hover:text-[#5cd2dd] hover:bg-transparent transition-all ease-in-out"
+          className="w-[30%] lg:w-[20%] text-white uppercase text-xs flex justify-center items-center rounded-lg bg-[#5cd2dd]"
         >
           {ctaData.button}
           <img
@@ -37,7 +44,7 @@ function CtaBox() {
             alt="arrow right"
             className="rotate-180 w-4"
           />
-        </button>
+        </motion.button>
       </div>
     </div>
   );

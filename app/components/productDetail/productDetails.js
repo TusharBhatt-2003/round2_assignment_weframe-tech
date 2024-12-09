@@ -1,4 +1,5 @@
 import { details } from "@/app/data/data";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const ProductDetails = () => {
@@ -18,12 +19,20 @@ const ProductDetails = () => {
         >
           {details.name}
         </h1>
-        <img
+
+        <motion.img
+          whileHover={{ scale: 1.5 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{
+            type: "spring",
+            stiffness: 600,
+            damping: 10,
+          }}
           role="button"
           aria-label="Add to Favourite"
           src={isLiked ? "redHeart.svg" : "heart.svg"}
           alt="add to favourite"
-          className="lg:w-7 lg:ml-2 cursor-pointer transition-all ease-in-out"
+          className="lg:w-7 lg:ml-2 cursor-pointer "
           onClick={toggleLike}
         />
       </div>

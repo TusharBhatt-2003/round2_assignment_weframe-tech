@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const Counter = () => {
@@ -14,17 +15,33 @@ const Counter = () => {
     <div
       id="counter"
       aria-label="Counter"
-      className="border select-none rounded-lg w-[40%] lg:w-[30%] flex py-3 lg:p-3 justify-around gap-2 lg:gap-5 items-center"
+      className="border select-none rounded-lg lg:w-[30%] flex  justify-between items-center"
     >
-      <img
+      <motion.img
+        className="p-4"
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.7 }}
+        transition={{
+          type: "spring",
+          stiffness: 600,
+          damping: 10,
+        }}
         role="button"
         aria-label="Minus"
         src="minus.svg"
         alt="Decrease"
         onClick={decrement}
       />
-      {count}
-      <img
+      <p>{count}</p>
+      <motion.img
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.7 }}
+        transition={{
+          type: "spring",
+          stiffness: 600,
+          damping: 10,
+        }}
+        className="p-4"
         role="button"
         aria-label="Add"
         src="plus.svg"

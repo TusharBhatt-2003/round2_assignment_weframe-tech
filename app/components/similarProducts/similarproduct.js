@@ -36,7 +36,7 @@ const SimilarProduct = () => {
         <a
           href="link"
           aria-label="link"
-          className="text-xs underline underline-offset-2 uppercase font-medium"
+          className="text-xs hover:text-zinc-600 underline underline-offset-2 uppercase font-medium"
         >
           Voir toute la collection
         </a>

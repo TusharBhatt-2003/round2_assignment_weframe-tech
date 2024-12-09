@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../navbar/logo";
 import { footerData, socialMediaIcons } from "@/app/data/data";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
@@ -38,7 +39,14 @@ function Footer() {
         </p>
         <div aria-label="Social Media" className="flex  lg:items-end">
           {socialMediaIcons.map((icon, i) => (
-            <a
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+              }}
               role="button"
               href={icon.link}
               key={i}
@@ -49,7 +57,7 @@ function Footer() {
                 alt={icon.name || "social media icon"}
                 className="w-[30px] h-[30px] mr-3"
               />
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

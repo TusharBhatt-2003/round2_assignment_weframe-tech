@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const ProductCard = () => {
@@ -18,11 +19,19 @@ const ProductCard = () => {
       <div className="bg-[#f9f7f5] rounded-xl mb-2">
         <div className="flex justify-between items-center px-2 pt-2">
           {/* Heart icon that toggles */}
-          <img
+          <motion.img
+            whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{
+              type: "spring",
+              stiffness: 600,
+              damping: 10,
+            }}
             role="button"
+            aria-label="Add to Favourite"
             src={isLiked ? "redHeart.svg" : "heart.svg"}
             alt="add to favourite"
-            className="lg:w-7 lg:ml-2 cursor-pointer transition-all ease-in-out"
+            className="lg:w-7 lg:ml-2 cursor-pointer "
             onClick={toggleLike}
           />
           <p

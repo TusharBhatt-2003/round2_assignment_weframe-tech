@@ -10,12 +10,12 @@ function ProductDisplay() {
       aria-label="Product"
       className="grid place-content-center lg:h-[75vh] w-full"
     >
-      <div className="relative grid place-content-center bg-[#f8f6f4] rounded-lg w-[80vw] h-[30vh] lg:w-[45vw] lg:h-[70vh]">
+      <div className="relative grid place-content-center bg-[#f8f6f4] rounded-lg w-[80vw] h-[30vh] md:h-[40vh] lg:w-[45vw] lg:h-[70vh]">
         <img
           src="displayItem.webp"
           alt="product"
           aria-label="Product image"
-          className="w-[60vw] h-[30vh] md:w-[40vw] md:h-[30vh] lg:w-[25vw]  lg:h-[50vh] center drop-shadow-xl"
+          className="w-[60vw] h-[30vh] md:w-[40vw] md:h-[35vh] lg:w-[25vw]  lg:h-[50vh] center drop-shadow-xl"
         />
         {/* Stacked Fading Images */}
         <div aria-label="Color Options" className="absolute p-2">

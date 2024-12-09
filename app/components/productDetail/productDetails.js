@@ -29,13 +29,13 @@ const ProductDetails = () => {
       <div className="flex justify-between text-sm font-medium border-y my-2 py-3">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
-            <img src="scale.svg" className="w-5" />
+            <img src="scale.svg" alt="length" className="w-5" />
             <div>
               {details.length} <sup className="font-light">cm</sup>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <img src="area.svg" className="w-5" />
+            <img src="area.svg" alt="area" className="w-5" />
             <div>
               {details.area} <sup className="font-light">cm</sup>
             </div>

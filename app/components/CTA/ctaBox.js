@@ -14,11 +14,17 @@ function CtaBox() {
       <div className="flex gap-2 justify-between">
         <input
           placeholder={ctaData.placeholder}
+          type="email"
+          name="email"
           className="w-[70%] lg:w-[80%] p-2 rounded-lg border border-[#f5e1eb] outline-none placeholder:text-[#bda2b0]"
         />
         <button className="w-[30%] lg:w-[20%] text-white uppercase text-xs flex justify-center items-center border border-[#5cd2dd] rounded-lg bg-[#5cd2dd] hover:text-[#5cd2dd] hover:bg-transparent transition-all ease-in-out">
           {ctaData.button}
-          <img src="arrow-right.svg" className="rotate-180 w-4" />
+          <img
+            src="arrow-right.svg"
+            alt="arrow right"
+            className="rotate-180 w-4"
+          />
         </button>
       </div>
     </div>

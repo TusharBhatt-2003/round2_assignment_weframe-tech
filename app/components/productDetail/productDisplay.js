@@ -7,7 +7,11 @@ function ProductDisplay() {
   return (
     <div className="grid place-content-center lg:h-[75vh] w-full">
       <div className="relative grid place-content-center bg-[#f8f6f4] rounded-lg w-[80vw] h-[30vh] lg:w-[45vw] lg:h-[70vh]">
-        <img src="displayItem.png" className="w-[25vw] center drop-shadow-xl" />
+        <img
+          src="displayItem.png"
+          alt="product"
+          className="w-[25vw] center drop-shadow-xl"
+        />
         {/* Stacked Fading Images */}
         <div className="absolute p-2">
           {images.map((src, index) => (

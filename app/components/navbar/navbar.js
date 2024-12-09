@@ -1,5 +1,4 @@
 "use client";
-
 import Logo from "./logo";
 import NavList from "./navList";
 import SearchBar from "./searchBar";

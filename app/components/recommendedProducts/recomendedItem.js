@@ -14,9 +14,9 @@ function RecomendedItem() {
       <div className="lg:grid-cols-3 w-full grid  grid-cols-2 justify-center lg:justify-between items-center gap-2 ">
         {Array(3)
           .fill(0)
-          .map((index) => (
-            <div className="w-[45vw] lg:w-[33vw]">
-              <Productcard key={index} />
+          .map((_, index) => (
+            <div key={index} className="w-[45vw] lg:w-[33vw]">
+              <Productcard />
             </div>
           ))}
       </div>

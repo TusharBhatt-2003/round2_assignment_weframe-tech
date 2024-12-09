@@ -1,3 +1,4 @@
+"use client";
 import { faq } from "@/app/data/data";
 import { motion } from "framer-motion";
 import React from "react";

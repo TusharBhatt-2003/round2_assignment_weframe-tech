@@ -44,7 +44,7 @@ function RecommendedItem() {
     <section
       id="recommended-items"
       aria-label="Recommended Items"
-      className="px-5 w-full mt-5 lg:mt-0"
+      className="px-5 w-full my-5 lg:mt-0 "
       ref={sectionRef} // Reference the section for IntersectionObserver
     >
       <div className="flex items-center justify-between py-4">

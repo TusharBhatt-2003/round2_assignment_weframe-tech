@@ -30,7 +30,7 @@ const SimilarProduct = () => {
     <section
       id="similar-items"
       aria-label="Similar Items"
-      className="px-5 w-full relative bg-[#fdfbfb] "
+      className="px-5 w-full relative my-5"
     >
       <div className="flex items-center justify-between py-4">
         <h2 className="font-['poppins'] text-xl">Articles similaires</h2>

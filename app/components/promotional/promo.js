@@ -40,7 +40,7 @@ function Promo() {
       id="promo"
       aria-label="Promo"
       ref={sectionRef} // Attach the ref to the section
-      className="w-full grid place-content-center lg:h-[65vh] bg-gradient-to-b from-[#fef7fb] to-white p-5"
+      className="w-full grid place-content-center lg:h-[65vh] bg-gradient-to-b from-[#fef7fb] to-white p-5 my-5"
     >
       <div className="space-y-14">
         <div className="text-center space-y-3 py-5">
